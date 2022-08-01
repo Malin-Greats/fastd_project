@@ -6,11 +6,11 @@ import (
 	"google.golang.org/grpc"
 )
 
-type ServiceCient struct {
+type ServiceClient struct {
 	Client pb.ParcelServiceClient
 }
 
-func InitServiceCient(c *config.Config) pb.ParcelServiceClient {
+func InitServiceClient(c *config.Config) pb.ParcelServiceClient {
 	cc, err := grpc.Dial(c.ParcelSvcUrl,grpc.WithInsecure())
 
 	if err != nil {

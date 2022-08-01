@@ -18,4 +18,15 @@ go get github.com/golang-jwt/jwt
 
 mkdir -p cmd pkg/config/envs pkg/db pkg/models pkg/pb pkg/services pkg/utils
 touch Makefile cmd/main.go pkg/config/envs/dev.env pkg/config/config.go
-touch pkg/pb/auth.proto pkg/db/db.go pkg/models/auth.go pkg/services/auth.go pkg/utils/hash.go pkg/utils/jwt.go
+touch pkg/pb/auth.proto pkg/db/db.go pkg/models/auth.go pkg/services/auth.go pkg/utils/hash.go pkg/utils/jwt.gonews 
+
+     "description": "description",
+     "sku": "sku",
+     "queque": "queque",
+     "cost": "cost",
+     "pickup_address": "pickup_address",
+     "delivery_address": "delivery_address",
+     "pickup_time": "pickup_time",
+     "owner": "owner",
+     "driver": "driver",
+     "delivery_stage": "delivery_stage",

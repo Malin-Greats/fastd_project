@@ -10,20 +10,20 @@ import (
 func RegisterRoutes(r *gin.Engine, c *config.Config, authSvc *auth.ServiceCient) {
 	a := auth.InitAuthMiddleware(authSvc)
 
-	svc := &ServiceCient{
-		Client: InitServiceCient(c),
+	svc := &ServiceClient{
+		Client: InitServiceClient(c),
 	}
 
 	routes := r.Group("/parcel")
 	routes.Use(a.AuthRequired)
 	routes.POST("/", svc.CreateParcel)
-	routes.GET("/", svc.FindOne)
+	routes.GET("/:id", svc.FindOne)
 }
 
-func (svc *ServiceCient) FindOne(ctx *gin.Context) {
+func (svc *ServiceClient) FindOne(ctx *gin.Context) {
 	routes.FindOne(ctx, svc.Client)
 }
 
-func (svc *ServiceCient) CreateParcel(ctx *gin.Context) {
+func (svc *ServiceClient) CreateParcel(ctx *gin.Context) {
 	routes.CreateParcel(ctx, svc.Client)
 }
