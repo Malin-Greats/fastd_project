@@ -38,3 +38,16 @@ touch pkg/pb/auth.proto pkg/db/db.go pkg/models/auth.go pkg/services/auth.go pkg
 
 
      curl --request POST --url http://localhost:3000/order --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA5MjA1OTksImlzcyI6ImdvLWdycGMtYXV0aC1zdmMiLCJJZCI6NSwiRW1haWwiOiJtdW55YUBuby5ubyJ9.AoScE3pMKhxmdq6Rru19TJlUfdWyDrpjiPontaBlAWc' --header 'Content-Type: application/json' --data '{"productId": 1,"quantity": 1}'
+
+echo "# fastd-api" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Malin-Greats/fastd-api.git
+git push -u origin main
+
+
+git add .
+git commit -m "first commit"
+git push -u origin main
