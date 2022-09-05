@@ -16,7 +16,7 @@ func RegisterRoutes(r *gin.Engine, c *config.Config, authSvc *auth.ServiceCient)
 
 	routes := r.Group("/parcel")
 	routes.Use(a.AuthRequired)
-	routes.POST("/", svc.CreateParcel)
+	routes.POST("/add", svc.CreateParcel)
 	routes.GET("/:id", svc.FindOne)
 }
 

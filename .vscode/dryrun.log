@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/greats/go/src/github.com/Malin-Greats/fastd_project'
+make: Leaving directory '/home/greats/go/src/github.com/Malin-Greats/fastd_project'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

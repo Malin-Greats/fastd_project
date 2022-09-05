@@ -30,3 +30,11 @@ touch pkg/pb/auth.proto pkg/db/db.go pkg/models/auth.go pkg/services/auth.go pkg
      "owner": "owner",
      "driver": "driver",
      "delivery_stage": "delivery_stage",
+
+
+     curl --request POST --url http://localhost:3000/product --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA5MjA1OTksImlzcyI6ImdvLWdycGMtYXV0aC1zdmMiLCJJZCI6NSwiRW1haWwiOiJtdW55YUBuby5ubyJ9.AoScE3pMKhxmdq6Rru19TJlUfdWyDrpjiPontaBlAWc' --header 'Content-Type: application/json' --data '{"name":"Product A","stock": 5,"price": 15}'
+
+     curl --request GET --url http://localhost:3000/product/1 --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA5MjA1OTksImlzcyI6ImdvLWdycGMtYXV0aC1zdmMiLCJJZCI6NSwiRW1haWwiOiJtdW55YUBuby5ubyJ9.AoScE3pMKhxmdq6Rru19TJlUfdWyDrpjiPontaBlAWc'
+
+
+     curl --request POST --url http://localhost:3000/order --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA5MjA1OTksImlzcyI6ImdvLWdycGMtYXV0aC1zdmMiLCJJZCI6NSwiRW1haWwiOiJtdW55YUBuby5ubyJ9.AoScE3pMKhxmdq6Rru19TJlUfdWyDrpjiPontaBlAWc' --header 'Content-Type: application/json' --data '{"productId": 1,"quantity": 1}'
